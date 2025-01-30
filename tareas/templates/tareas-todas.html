@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center display-5 text-success">Todas la Tareas</h1>
+<main>
+
+
+
+    <div class="container">
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Autor</th>
+
+            </tr>
+            {% for tarea in tareas %}
+            <tr>
+                {% if tarea.importante %}
+                <td>
+                    <h3 class="fw-bold text-success">{{ tarea.titulo }}</h3>
+                </td>
+                {% else %}
+                <td>
+                    <h4 class="fw-bold text-secondary">{{ tarea.titulo }}</h4>
+                </td>
+                {% endif %}
+                <td>{{ tarea.descripcion }}</td>
+                <td>{{ tarea.usuario }}</td>
+
+
+                
+               
+
+            </tr>
+
+            {% endfor %}
+        </table>
+
+        <!-- <ul>
+            {% for tarea in tareas %}
+            <li>
+                <a href="{% url 'editar_tarea' tarea.id %}">
+                    {% if tarea.importante %}
+                    <h2>{{tarea.titulo}}</h2>
+                    {% else %}
+                    <p>{{tarea.titulo}}</p>
+                    {% endif %}
+                    <p>Contenido: {{tarea.descripcion}}</p>
+
+                    <h4>Autor: {{tarea.usuario}}</h4>
+
+                </a>
+            </li>
+            {% endfor %}
+        </ul> -->
+
+    </div>
+</main>
+{% endblock %}

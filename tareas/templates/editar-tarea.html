@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ error }}
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 md offset-md-3 mt-5">
+            <form class="card card-body" action="{% url 'editar_tarea' tarea.id %}" method="POST">
+                <h2 class="text-center text-warning">Editar Tarea</h2>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary">
+                    Guardar
+                </button>
+            </form>
+            {% endblock %}
+        </div>
+
+    </div>
+</main>

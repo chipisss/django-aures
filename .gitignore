@@ -1,0 +1,7 @@
+venv
+requirements.txt
+db.sqlite3
+__pycache__
+settings.py
+build.sh
+.env
