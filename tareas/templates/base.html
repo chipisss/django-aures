@@ -24,11 +24,11 @@
                     <li class="nav-item"><a class="nav-link" href="/">Home</a> </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link" href="/tareas/crear_tarea/">Crear tareas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tareas">Tareas/Activas/Editar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tareas">Editar/Terminar/Eliminar</a></li>
                     <li class="nav-item"><a class="nav-link" href="/todas">Todas las tareas</a> </li>
 
                     <li class="nav-item"><a class="nav-link" href="/outlog">Logout</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/otro">Pendientes</a> </li>
+                    
 
                     {% else %}
                     <li class="nav-item"><a class="nav-link" href="/registro">Registrarse</a></li>

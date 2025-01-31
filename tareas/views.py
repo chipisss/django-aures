@@ -118,12 +118,13 @@ def editar_tarea(request, tarea_id):
 
 
 @login_required
-def terminar(request, tarea_id):
+def finalizar(request, tarea_id):
     task = get_object_or_404(Tarea, pk=tarea_id)
     if request.method == "POST":
         task = get_object_or_404(Tarea, pk=tarea_id)
         task.completado = timezone.now()
         task.save()
+        print("terminado")
     return redirect("tareas")
 
 

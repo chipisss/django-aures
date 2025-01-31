@@ -23,19 +23,20 @@
                 </td>
                 {% else %}
                 <td>
-                    <h4 class="fw-bold text-secondary">{{ tarea.titulo }}</h4></td>
+                    <h4 class="fw-bold text-secondary">{{ tarea.titulo }}</h4>
+                </td>
                 {% endif %}
                 <td>{{ tarea.descripcion }}</td>
                 <td>{{ tarea.usuario }}</td>
                 <td>
                     <form action="{% url 'eliminar' tarea.id %}" method="POST">
                         {% csrf_token %}
-                        <button  class="btn btn-danger"> Eliminar</button>
+                        <button class="btn btn-danger"> Eliminar</button>
 
                     </form>
                 </td>
                 <td>
-                    <form action="{% url 'terminar' tarea.id %}" method="POST">
+                    <form action="{% url 'finalizar' tarea.id %}" method="POST">
                         {% csrf_token %}
                         <button class="btn btn-warning"> Terminar</button>
 
@@ -44,7 +45,7 @@
                 <td>
                     <form action="{% url 'editar_tarea' tarea.id %}" method="GET">
                         {% csrf_token %}
-                        <button  class="btn btn-primary"> Editar</button>
+                        <button class="btn btn-primary"> Editar</button>
 
                     </form>
                 </td>

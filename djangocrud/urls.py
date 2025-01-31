@@ -26,8 +26,9 @@ urlpatterns = [
     path("tareas/", views.tareas, name="tareas"),
     path("tareas/crear_tarea/", views.crear_tarea, name="crear_tarea"),
     path("tareas/editar_tarea/<int:tarea_id>/", views.editar_tarea, name="editar_tarea"),
-    path("tareas/<int:tarea_id>/", views.terminar, name="terminar"),
-    path("tareas/<int:tarea_id>/", views.eliminar, name="eliminar"),
+    
+    path("tareas/finalizar/<int:tarea_id>/", views.finalizar, name="finalizar"),
+    path("tareas/eliminar/<int:tarea_id>/", views.eliminar, name="eliminar"),
     path("outlog/", views.outlog, name="outlog"),
     path("otro/", views.home, name="otro"),
     path("autenticar/", views.autenticar, name="autenticar"),

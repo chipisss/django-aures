@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-center display-5 text-success">Todas la Tareas</h1>
+<h1 class="text-center display-5 text-primary"> Tareas Pendientes/Terminadas</h1>
 <main>
 
 
@@ -13,6 +13,7 @@
                 <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>Autor</th>
+                <th>Terminado</th>
 
             </tr>
             {% for tarea in tareas %}
@@ -28,6 +29,7 @@
                 {% endif %}
                 <td>{{ tarea.descripcion }}</td>
                 <td>{{ tarea.usuario }}</td>
+                <td>{{ tarea.completado }}</td>
 
 
                 
